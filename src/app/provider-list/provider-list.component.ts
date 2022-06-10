@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {ProviderService} from '../services/provider.service';
 @Component({
   selector: 'app-provider-list',
@@ -7,14 +8,13 @@ import {ProviderService} from '../services/provider.service';
 })
 export class ProviderListComponent implements OnInit {
 
-  constructor(private serviceProvider:ProviderService) { }
-
+  constructor(private serviceProvider:ProviderService,
+    private router: Router) { }
   providers:any;
   ngOnInit(): void {
 
     this.serviceProvider.getProviders().subscribe(
       data=>{
-        //console.log(data);
         this.providers = data;
       }
     );
@@ -28,8 +28,6 @@ export class ProviderListComponent implements OnInit {
         this.refreshListProvider()
       }
     );
-
-
   }
 
   refreshListProvider(){
@@ -39,6 +37,10 @@ export class ProviderListComponent implements OnInit {
         this.providers = data;
       }
     );
+  }
+
+  UpdateProvider(providers:any){
+    this.router.navigate(['/updateprovider' + '/' + providers.id]);
   }
 
 }

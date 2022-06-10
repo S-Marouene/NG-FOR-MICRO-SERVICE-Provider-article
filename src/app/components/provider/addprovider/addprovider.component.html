@@ -1,0 +1,60 @@
+<!--h1 align="center">Add new Provider</h1>
+<div class="container">
+<br>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <form>
+        <div class="form-group">
+          <label for="example1">Name</label>
+          <input type="text" class="form-control" id="example1" placeholder="Name...">
+        </div>
+
+        <div class="form-group">
+          <label for="example2">Adress</label>
+          <input type="text" class="form-control" id="example2" placeholder="Adress...">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Add provider</button>
+      </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+</div-->
+
+<h1 align="center">Add new Provider</h1>
+
+<div class="container">
+  <br />
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <form #formumaire="ngForm" (ngSubmit)="addProvider(formumaire)">
+        <label for="name">Name</label>
+        <input
+          required
+          id="name"
+          type="text"
+          ngModel
+          name="name"
+          class="form-control"
+        />
+
+        <label for="Adress">Adress</label>
+        <input
+          required
+          id="address"
+          type="text"
+          ngModel
+          name="address"
+          class="form-control"
+        />
+
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </form>
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+</div>

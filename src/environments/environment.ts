@@ -7,6 +7,8 @@ export const environment = {
   urlProvider :"http://127.0.0.1:8001/providers/all",
   urlArticle :"http://127.0.0.1:8002/articles/all",
   urlDelProvider :"http://127.0.0.1:8001/providers/delete/",
+  urlAddProvider :"http://127.0.0.1:8001/providers/add",
+  urlProvidersByID : "http://127.0.0.1:8001/providers/",
 
 };
 

@@ -19,11 +19,13 @@
           <th scope="row">{{provider.id}}</th>
           <td>{{provider.name}}</td>
           <td>{{provider.address}}</td>
-          <td><button class="btn-danger" (click)="deleteProvider(provider)">Delete</button><button class="btn-success">Update</button></td>
+          <td><button class="btn-danger" (click)="deleteProvider(provider)">Delete</button>
+              <button class="btn-success" (click)="UpdateProvider(provider)">Update</button></td>
         </tr>
 
       </tbody>
     </table>
+    <button class="btn btn-primary" routerLink='/addprovider' > Add Provider </button>
 
   </div>
   <div class="col-md-2"></div>
