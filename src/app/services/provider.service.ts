@@ -11,6 +11,7 @@ export class ProviderService {
   urlDelProvider: string = environment.urlDelProvider;
   urlAddProvider: string = environment.urlAddProvider;
   urlProvidersByID: string = environment.urlProvidersByID;
+  urlUpdateProvider: string = environment.urlUpdateProvider;
 
   constructor(private http:HttpClient) { }
 
@@ -27,5 +28,10 @@ export class ProviderService {
 
   getProvidersbyID(id:any){
     return this.http.get(this.urlProvidersByID+id);
+  }
+
+  updateProvider(provider:any)
+  {
+    return this.http.put(this.urlUpdateProvider+provider["id"],provider);
   }
 }
