@@ -1,0 +1,33 @@
+
+
+<h1 align="center">Liste Providers</h1>
+<br><br>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <thead  class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Config</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let provider of providers">
+          <th scope="row">{{provider.id}}</th>
+          <td>{{provider.name}}</td>
+          <td>{{provider.address}}</td>
+          <td><button class="btn-danger" (click)="deleteProvider(provider)">Delete</button><button class="btn-success">Update</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
+
+

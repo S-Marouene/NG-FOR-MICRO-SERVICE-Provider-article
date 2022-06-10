@@ -1,0 +1,37 @@
+
+
+<h1 align="center">Liste Des Articles</h1>
+<br><br>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <table class="table table-striped">
+      <thead  class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">price</th>
+          <th scope="col">providerId</th>
+          <th scope="col">ProviderName</th>
+          <th scope="col">Config</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let article of articles">
+          <th scope="row">{{article['article'].id}}</th>
+          <td>{{article['article'].name}}</td>
+          <td>{{article['article'].price}}</td>
+          <td>{{article['article'].providerId}}</td>
+          <td>{{article['provider'].name}}</td>
+          <td><button class="btn-danger">Delete</button><button class="btn-success">Update</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+
+
